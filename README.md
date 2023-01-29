@@ -27,6 +27,7 @@ Things you may want to cover:
 
 * turbo:loadでturboを無効化する
 
+* ruby 3.1
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile
 rbenv global 3.1.2
