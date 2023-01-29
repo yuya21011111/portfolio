@@ -1,0 +1,70 @@
+<%
+=begin%>
+ <section id="typing" class="app">
+  <div id="ty-start-page" class="show"></div>
+  <h1>Typing Game</h1>
+  <div>
+    Timelimit:
+    <select class="ty-time-select" list="time-list">
+      <optgroup id="time-list">
+        <option value="10">10 seconds</option>
+        <option value="30">30 seconds</option>
+        <option value="60">60 seconds</option>
+        <option value="999">無制限</option>
+      </optgroup>
+    </select>
+  </div>
+</section> 
+<%
+=end%>
+
+<div id="root">
+        <section id="top" class='active'>
+            <h1>typing Go!</h1>
+            <br>
+            <br>
+            <h2>typing Go!はタイピングを競うゲームになります！</h2>
+        </section>
+        <section id="typing" class='app'>
+            <div id="ty-start-page" class='show'>
+                <h1>typing Go!</h1>
+                <div>
+                    Timelimit:
+                    <select class="ty-time-select" list='time-list'>
+                        <optgroup id="time-list">
+                            <option value="10">10 秒</option>
+                            <option value="20">20 秒</option>
+                            <option value="30" selected>30 秒</option>
+                            <option value="45">45 秒</option>
+                            <option value="60">60 秒</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <h2>準備はOK?</h2>
+                <p>始めるには<span>Enter</span>を押してね！</p>
+            </div>
+            <div id="ty-game">
+                <h2><span id='ty-title-time'></span> Seconds TYPING CHALLENGE</h2>
+                <div>
+                    <span>REMAINING TIME</span>
+                    <span id='ty-timer'></span>
+                    <span>s</span>
+                </div>
+                <div id="ty-quote-container">
+                    <div id="ty-quote"></div>
+                    <div id="ty-author">Author:
+                        <span id='ty-author-name'></span>
+                    </div>
+                </div>
+                <textarea id="ty-textarea"></textarea>
+            </div>
+            <div id="ty-result-container">
+                <div id="ty-result">
+                    <h3>あなたのタイピング回数は ...</h3>
+                    <h2 id='ty-LPM'></h2><span>[ またチャレンジしてね！ ]</span>
+                    <div id="ty-back-to-start">戻る</div>
+                </div>
+                <div id="ty-quote-review"></div>
+            </div>
+        </section>
+    </div>

@@ -1,0 +1,70 @@
+<body>
+<div class="cover-slide hover-darken inview">
+<%= image_tag 'img_logo2.jpg',class: 'img-fluid' %>
+<p id="p" class="p">YUYA PORTFOLIO</p>
+</div>
+<div id="profile" class="wrapper">
+    <div class="front_text inview" id="Profile">
+    Profile
+    </div>
+    
+    <br>
+    <ul>
+        <li>山地　勇弥</li>
+        <li>(やまじ　ゆうや)</li>
+        <br>
+        <li>1994年7月20日誕生日 / 28歳</li>
+        <br> 
+    </ul>
+    <%= image_tag 'img_log.png',class: 'center',id: 'img_left' %>
+</div>
+
+<div class="animate-title inview">
+学習したプログラミングスキル
+</div>
+<ul>
+    <li><%= image_tag 'logo-preview.png',class: 'img-log' %>フロントエンド</li>
+    <li>HTML | CSS | JavaScript | jQuery </li>
+    <li><%= image_tag 'logo-preview.png',class: 'img-log' %>バックエンド</li>
+    <li> Java | Ruby | Python | PHP | Ruby on Rails | Laravel | SQL</li>
+    <li><%= image_tag 'logo-preview.png',class: 'img-log' %>インフラ</li>
+    <li> Linux(Centos,Ubuntu)</li>
+     <li><%= image_tag 'logo-preview.png',class: 'img-log' %>その他</li>
+     <li> Git | GitHub</li>
+</ul>
+<div class="animate-title2 inview">
+自己PR
+</div>
+<ul>
+     <li class="appeal_title"><%= image_tag 'logo-preview.png',class: 'img-log' %>1.継続力がある</li>
+     <li class="appeal">私は、継続力があります。清掃作業員として１０年経験しました。<br>
+     そこで1度ですが汚れが残っているとクレームをいただき、落ち込んでしまいましたがずっと引き摺ってもいられないので私はやり方を変えよく見る事に力を入れました。<br>
+     そうする事で気付かずいた汚れやゴミに気付け、また終業１０分前には各フロアを再確認することでゴミが落ちてないか見てから仕事を終えました。<br>
+     その結果、管理人から「いつも綺麗にしてくれてありごうございます」とお礼の言葉をいただけました。</li>
+</ul>
+<ul>
+     <li class="appeal_title"><%= image_tag 'logo-preview.png',class: 'img-log' %>2.学ぶ姿勢ががある</li>
+     <li class="appeal">私は常に学ぶ姿勢を持っていることです<br>
+     友人からPythonで作られたアプリを見せてもらったのがきっかけでプログラミングに興味を持ち専門学校へ入学しました。
+     授業と合わせて独学でも勉強しております、私は自分でアプリを作ってみたい気持ちから「Ruby on rails」や「Laravel」に興味を持ち、
+     書籍やUdemyで毎日３時間の独学をしています。そのおかげで簡単な掲示板などを作れるようになりました。また、プログラミングだけできてはダメだと思い、
+     PCの知識が学べる基本情報技術者試験の勉強も同時に行い1度の受験で合格しています。
+    
+     </li>
+</ul>
+
+<div class="animate-title2 inview" id="Production">
+製作物
+</div>
+<ul>
+    <li><%= image_tag 'logo-preview.png',class: 'img-log' %><%= link_to 'タイピングゲーム', 'homes/typing', {class: "link"}%></li>
+<ul>
+
+
+</body>
+<%
+=begin%>
+ <%= stylesheet_link_tag 'test' %> 
+<%
+=end%>
+<%= javascript_include_tag "index.js" %>

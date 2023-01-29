@@ -1,0 +1,342 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Caramel&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Nunito+Sans & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Nunito+Sans&display=swap');
+/* .parent {
+  background-color: rgb(81, 218, 218);
+  height: 600px;
+  width: 100%;
+} */
+/* .img-fluid{
+    height: 500px;
+    width: 100%;
+} */
+
+body {
+  background-color: #f4f4f4b2;
+}
+
+.link {
+  text-decoration: none;
+  color:  #000; 
+}
+
+.wrapper {
+  font-family: 'Nunito Sans', sans-serif;
+  max-width: 300px;
+  margin: 0 auto 130px auto;
+  font-size: 0.9rem;
+  padding: 0.4%;
+}
+
+/* 画像のスライドショー */
+.cover-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.cover-slide::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #eaebe6;
+  opacity: 0;
+}
+.cover-slide.inview::after {
+  opacity: 1;
+  -webkit-animation-name: kf-cover-slide;
+          animation-name: kf-cover-slide;
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes kf-cover-slide {
+  0% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  50% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  50.1% {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+  100% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+}
+
+@keyframes kf-cover-slide {
+  0% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  50% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  50.1% {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+  100% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+}
+
+.cover-slide p {
+  font-family: 'Caramel', cursive;
+  font-size: 5em;
+  color: indianred;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+/* --------------------------------- */ 
+
+/* 画像の中に文字を出力 */
+
+.img-fluid{
+    margin-bottom: 80px;
+    height: 500px;
+    width: 100%;
+}
+
+.footer {
+  color: rgba(13, 12, 12, 0.764);
+  text-align: center;
+  font-size: 12px;
+}
+/* --------------------------------- */
+
+/* Profile */
+.full_name {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.front_text {
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: center;
+  position: relative;
+  margin: 50px;
+  font-weight: 300;
+  font-size: 35px;
+  letter-spacing: 10px;
+  border-bottom: 3px solid #cddc39;
+}
+
+
+.left_sp {
+  display: lite; /*横並び*/
+}
+
+
+#img_left {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+
+ul {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+
+li {
+    /* list-style: none;
+    margin-left: 1.4em;
+	  text-indent: -1.4em;
+    margin-bottom: 5px */
+    font-family: 'Noto Sans JP', sans-serif;
+    max-width: 960px;
+    list-style: none;
+    font-size: 1.5em;
+    margin-left: 20px;
+}
+
+.animate-title,.animate-title2 {
+  font-family: 'Nunito Sans', sans-serif;
+  position: relative;
+  margin: 50px;
+  font-weight: 300;
+  font-size: 25px;
+  letter-spacing: 10px;
+  border-bottom: 3px solid #cddc39;
+}
+
+
+
+/* --------------------------------- */
+
+
+/* 学習したプログラミングスキル  */
+
+.img-log {
+  width:60px;
+  height:60px;
+}
+
+.appeal_title {
+  color: rgb(251, 11, 11); 
+}
+
+.appeal {
+  font-size: 0.9rem;
+}
+
+/* --------------------------------- */
+
+/* アニメーション animate-title.inview  */
+.front_text.inview .char,.animate-title.inview .char,.animate-title2.inview .char {
+  display: inline-block;
+  -webkit-animation-name: kf-animate-chars;
+          animation-name: kf-animate-chars;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.39, 1.57, 0.58, 1);
+          animation-timing-function: cubic-bezier(0.39, 1.57, 0.58, 1);
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.front_text.inview .char:nth-child(1),.animate-title.inview .char:nth-child(1),.animate-title2.inview .char:nth-child(1) {
+  -webkit-animation-delay: 0.04s;
+          animation-delay: 0.04s;
+}
+.front_text.inview .char:nth-child(2),.animate-title.inview .char:nth-child(2),.animate-title2.inview .char:nth-child(2) {
+  -webkit-animation-delay: 0.08s;
+          animation-delay: 0.08s;
+}
+.front_text.inview .char:nth-child(3),.animate-title.inview .char:nth-child(3),.animate-title2.inview .char:nth-child(3) {
+  -webkit-animation-delay: 0.12s;
+          animation-delay: 0.12s;
+}
+.front_text.inview .char:nth-child(4),.animate-title.inview .char:nth-child(4),.animate-title2.inview .char:nth-child(4) {
+  -webkit-animation-delay: 0.16s;
+          animation-delay: 0.16s;
+}
+.front_text.inview .char:nth-child(5),.animate-title.inview .char:nth-child(5),.animate-title2.inview .char:nth-child(5) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.front_text.inview .char:nth-child(6),.animate-title.inview .char:nth-child(6) {
+  -webkit-animation-delay: 0.24s;
+          animation-delay: 0.24s;
+}
+.front_text.inview .char:nth-child(7),.animate-title.inview .char:nth-child(7) {
+  -webkit-animation-delay: 0.28s;
+          animation-delay: 0.28s;
+}
+.animate-title.inview .char:nth-child(8) {
+  -webkit-animation-delay: 0.32s;
+          animation-delay: 0.32s;
+}
+.animate-title.inview .char:nth-child(9) {
+  -webkit-animation-delay: 0.36s;
+          animation-delay: 0.36s;
+}
+.animate-title.inview .char:nth-child(10) {
+  -webkit-animation-delay: 0.42s;
+          animation-delay: 0.42s;
+}
+.animate-title.inview .char:nth-child(11) {
+  -webkit-animation-delay: 0.48s;
+          animation-delay: 0.48s;
+}
+.animate-title.inview .char:nth-child(12) {
+  -webkit-animation-delay: 0.54s;
+          animation-delay: 0.54s;
+}
+.animate-title.inview .char:nth-child(13) {
+  -webkit-animation-delay: 0.59s;
+          animation-delay: 0.59s;
+}
+.animate-title.inview .char:nth-child(14) {
+  -webkit-animation-delay: 0.59s;
+          animation-delay: 0.59s;
+}
+@-webkit-keyframes kf-animate-chars {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes kf-animate-chars {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------- */
+
+/* <= typing */
+
+/* <= typing */
+
+
+/* .navbar-nav .nav-link {
+  padding-right: 0;
+  padding-left: 71em;
+} */
