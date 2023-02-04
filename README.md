@@ -31,3 +31,7 @@ Things you may want to cover:
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile
 rbenv global 3.1.2
+
+git add -A .
+
+ git commit -m "commit"

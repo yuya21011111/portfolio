@@ -31,5 +31,31 @@ animation(str2,el2);
 
 
 document.addEventListener('turbo:load', function() {
+  const startPage = document.querySelector('#ty-start-page');
+  const typingGame = document.querySelector('#ty-game');
+  const titleTime = document.querySelector('#ty-title-time');
+  const timer = document.querySelector('#ty-timer');
+  const timeSelectEl = document.querySelector('.ty-time-select');
+
+  var timelimit = 30;
+  var remainingTime;
+  
+  timeSelectEl.addEventListener('change', () => {
+    timelimit = timeSelectEl.value;
+  })
+  window.addEventListener('keypress', e => {
+    if(e.key === 'Enter') {
+      start();
+    }
+    return;
+  });
+
+  function start() {
+    startPage.classList.remove('show');
+    typingGame.classList.remove('show');
+    titleTime.textContent = timelimit;
+    remainingTime = timelimit;
+    timer.textContent = remainingTime;
+  }
 
 });
